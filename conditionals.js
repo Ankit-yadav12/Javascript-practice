@@ -40,3 +40,40 @@ if(year%4==0){
 }else{
     console.log("Not a leap year");
 }
+
+
+//discount calculator
+let amount = 4000;
+let discount ;
+if (amount < 5000) discount=0;
+else if(amount<=7000) discount = 5;
+else if (amount<=9000) discount = 10;
+else if (amount>9000) discount = 20;
+else {
+    console.log("Enter a valid amount");
+    discount = 0;
+}
+let dis = discount*amount/100;
+let payableAmount = amount-dis;
+console.log("payable amount:"+payableAmount);
+
+
+ //electricity bill
+ let unit = 401;
+ let rem = unit;
+ amount = 0;
+
+ if(rem>400){
+    amount += 13*(rem-400);
+    rem = 400;
+ }if(rem>200){
+    amount+= 8*(rem-200);
+    rem=200;
+ }if(rem>100){
+    amount += 6* (rem-100);
+    rem = 100;
+ }if(rem<=100){
+    amount+= 4.2*rem;
+ }
+
+ console.log(`Your Electricity bill : ${amount}`);

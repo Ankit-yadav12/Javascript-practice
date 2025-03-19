@@ -48,6 +48,6 @@ console.log("area fo triangle :" + area);
 }
 
 //circumference of circle
-let radius = 10;
+let radius = 5.2;
 let circumference = 2*Math.PI*radius;
 console.log("circumference of circle is: " + circumference.toFixed(3));
