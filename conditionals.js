@@ -77,3 +77,5 @@ console.log("payable amount:"+payableAmount);
  }
 
  console.log(`Your Electricity bill : ${amount}`);
+
+ 
