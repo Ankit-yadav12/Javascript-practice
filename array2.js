@@ -33,7 +33,7 @@ for(let i = 0;i<arr.length-1;i++){
         if(arr[j] >arr[j+1]){
             let temp =arr[j]
             arr[j] = arr[j+1];
-            arr[j+1] = temp;        
+            arr[j+1] = temp;
         }
     }
 }
@@ -74,3 +74,27 @@ for(let i = 1;i<arr.length;i++){
     }
     process.stdout.write(arr[i-1] + " ");
 }
+
+//binary search
+arr = [1,2,3,4,5,6];
+let n = arr.length;
+target = 5;
+
+let bs = function(low,high,target){
+    mid = Math.floor((low+high)/2);
+    if (low > high) {
+        return -1;
+    }
+
+    if(arr[mid]===target){
+        return mid;
+    }else if(target>arr[mid]){
+        return bs(mid+1,high,target);
+    }else{
+        return bs(low,mid-1, target);
+    }
+}
+
+let ans = bs(0,n,target);
+console.log();
+console.log(ans);
